@@ -23,12 +23,29 @@
 		</header>
 		<hr />
 		<main>
+			<div id="posts" class="box">
+				<h2>Posts</h2>
+				<ul>
+					{% for post in site.posts %}
+					<li class="postcard"><article>
+						<h3 class="posttitle"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+						<p class="postdate">{{ post.date | date: "%y-%m-%d" }}</p>
+						{%- if post.excerpt -%}
+          					<div class="postexcerpt">
+               					{{ post.excerpt }}
+               				</div>
+                   		{%- endif -%}
+					</article></li>
+				</ul>
+
+			</div>
+
 			<div id="intro">
 				<div class="box">
 					<img src="assets/images/profile.jpeg" id="profile" />
 				</div>
 				<div class="box" id="specialbox">
-					<h1 id="hello">Hi, I'm Aiden Ghim.</h1>
+					<h2 id="hello">Hi, I'm Aiden Ghim.</h2>
 					<p>
 						Hi! I am a student living in South Korea with a keen
 						interest in math, physics, and computer science. I like
