@@ -31,6 +31,10 @@ main {
 	padding-bottom: 2%;
 }
 
+#article {
+	text-align: center;
+}
+
 a#iconref {
 	text-decoration: none;
 	color: white;
