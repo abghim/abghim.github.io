@@ -19,10 +19,6 @@ main {
     font-weight: 800;
 } */
 
-a {
-	text-decoration: none;
-	color: white;
-}
 #icon {
 	text-align: center;
 	/* margin-top: auto;
@@ -34,6 +30,12 @@ a {
 	padding-top: 2%;
 	padding-bottom: 2%;
 }
+
+a#iconref {
+	text-decoration: none;
+	color: white;
+}
+
 hr {
 	color: white;
 }
