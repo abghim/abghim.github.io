@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>{{ page.title }}</title>
+		<!-- UPDATE LATER: FILE PATH DIFFERENT (dev purposes) -->
+		<link rel="stylesheet" href="post.css" />
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="/assets/images/favicon.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Anta&family=Forum&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header>
+			<h1 id="icon"><a id="iconref" href="index.html">Aiden Ghim</a></h1>
+		</header>
+		<hr />
+		<main>
+			<h1>{{ page.title }}</h1>
+			{{ content }}
+		</main>
+	</body>
+</html>
