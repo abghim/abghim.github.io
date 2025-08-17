@@ -1,9 +1,9 @@
 header {
-    margin: 0;
+	margin: 0;
 }
 
 main {
-    margin: 0px;
+	margin: 0px;
 }
 
 /*
@@ -20,74 +20,83 @@ main {
 } */
 
 hr {
-    color: white;
+	color: white;
 }
 
 #icon {
-    text-align: center;
-    /* margin-top: auto;
+	text-align: center;
+	/* margin-top: auto;
     margin-bottom: auto; */
 
-    font-size: 45px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-top: 2%;
-    padding-bottom: 2%;
+	font-size: 45px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-top: 2%;
+	padding-bottom: 2%;
 }
 
 a {
-    text-decoration: none;
-    color: white;
+	text-decoration: none;
+	color: white;
 }
 
 a:hover {
-    font-weight: 800;
+	font-weight: 700;
 }
 
 body {
-    margin: 0px;
-    background-color: rgb(19, 24, 41);
-    color: white;
+	margin: 0px;
+	background-color: #14191f;
+	color: white;
+}
+
+li.postcard {
+	margin: 1px;
+	padding: 1px;
 }
 
 #intro {
-    display: flex;
+	display: flex;
 }
 
 #profile {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .box {
-    width: 25%;
-    padding: 1%;
+	width: 25%;
+	padding: 1%;
 
-    /* border: solid 1px white; */
-    margin: 1%;
+	/* border: solid 1px white; */
+	margin: 1%;
 }
 
 h1,
 h2,
 h3 {
-    font-family: "Anta", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+	font-family: "Anta", sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
 p {
-    font-family: "Forum", serif;
-    font-weight: 400;
-    font-style: normal;
+	font-family: "Forum", serif;
+	font-weight: 300;
+	font-style: normal;
 
-    font-size: 25px;
+	font-size: 25px;
 }
 
 #hello {
-    font-size: 50px;
+	font-size: 30px;
+}
+
+div#posts h2 {
+	font-size: 30px;
 }
 
 #specialbox {
-    width: 60%;
+	width: 60%;
 }
