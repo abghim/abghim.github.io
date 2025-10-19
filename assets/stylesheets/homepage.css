@@ -52,7 +52,8 @@ body {
 
 li.postcard {
 	margin: 1px;
-	padding: 1px;
+	padding: 1px; 
+	width: 80%;
 }
 
 #intro {
