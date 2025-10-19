@@ -31,9 +31,6 @@ main {
 	padding-bottom: 2%;
 }
 
-#article {
-	text-align: center;
-}
 
 a {
 	text-decoration: none;
@@ -66,7 +63,7 @@ p {
 	font-family: "Forum", serif;
 	font-weight: 300;
 	font-style: normal;
-	width: 60%;
+	width: 600px;
 	margin: 40px auto;
 	padding: 0 10px;
 	line-height: 1.4;
