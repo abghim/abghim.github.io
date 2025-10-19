@@ -56,6 +56,10 @@ li.postcard {
 	width: 800px;
 }
 
+#posts {
+	width: 90%;
+}
+
 article {
 	width: 100%;
 }
