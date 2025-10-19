@@ -66,6 +66,10 @@ p {
 	font-family: "Forum", serif;
 	font-weight: 300;
 	font-style: normal;
+	width: 60%;
+	margin: 40px auto;
+	padding: 0 10px;
+	line-height: 1.4;
 
 	font-size: 25px;
 	text-align: left;
