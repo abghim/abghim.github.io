@@ -56,6 +56,11 @@ li.postcard {
 	width: 800px;
 }
 
+.postdate {
+	display: inline;
+	font-size: 16px;
+}
+
 #posts {
 	width: 90%;
 }

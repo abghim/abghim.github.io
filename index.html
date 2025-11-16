@@ -27,12 +27,12 @@
 		<hr />
 		<main>
 			<div id="posts" class="box">
-				<h2>Posts</h2>
+				<h1>Posts</h1>
 				<ul>
 					{% for post in site.posts %}
 					<li class="postcard"><article>
-						<h3 class="posttitle"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-						<p class="postdate">{{ post.date | date: "%y-%m-%d" }}</p>
+						<h2 class="posttitle"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+						<span class="postdate">{{ post.date | date: "%y-%m-%d" }}</span>
 						{%- if post.excerpt -%}
           					<div class="postexcerpt">
                					{{ post.excerpt }}
@@ -44,6 +44,7 @@
 
 			</div>
 
+			<hr>
 			<div id="intro">
 				<div class="box">
 					<img src="assets/images/profile.jpeg" id="profile" />
