@@ -7,7 +7,7 @@ The area of an ellipse is given by $\pi a b$, where a and b are half-width and h
 
 Quick intuition regarding arc length of parameterized curves easily lead us to integrals of the form $s=\int^{2\pi}_0 \sqrt{1-e^2 \cos ^2 t }dt$. But loads of integrals composed of elementary functions cannot be reduced to elementary form. When those pesky integrals arise in important contexts, mathematicians define new functions to confront them without algebraic hassle.
 
-Apparently, a whole new family of integrals arise from the study of ellipses' arc length. While handful of the new *elliptic integrals* are detached from the geometric ellipse itself, the names stuck. The near-generic term was also given to a mysterious curve constructing from inverting the elliptic integrals. The elliptic curve $y^2=x^3+bx+c$, in all its glory, is plotted below.
+Apparently, a whole new family of integrals arise from the study of ellipses' arc length. While handful of the new *elliptic integrals* are detached from the geometric ellipse itself, the names stuck. The near-generic term was also given to a mysterious curve constructed from inverting the elliptic integrals. The elliptic curve $y^2=x^3+bx+c$, in all its glory, is plotted below.
 
 ![an elliptic curve](/assets/images/math_elliptic.png)
 
