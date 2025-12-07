@@ -3,7 +3,7 @@ layout: post
 title: Clouds, Moon, and a Lesson
 excerpt_separator: <!--more-->
 ---
-On December 6th I visited Geumsan-gun, the southern tip of Chungcheong province. Staying at my grandmother's place, I planned an ambitious stargazing session, expecting crystal clear weather from the forecast. 
+On December 6th I visited Geumsan-gun, the southern tip of Chungcheong province. Staying at my grandmother's place, I planned an ambitious stargazing session, expecting crystal clear weather from the forecast. <!--more-->
 
 The forecast gave us a suspicious clear window between 7 p.m. and 0 a.m., so I carefully planned Messier objects and double stars for the best route. The plan was: M31 (Andromeda Galaxy), M15 (Perseus Cluster), M39 (Pyramid Cluster), M34 (Spiral Cluster), M33 (Pinwheel Galaxy), the Castor double star, M42 (Orion Nebula), and M45 (Pleiades). 
 
