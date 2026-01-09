@@ -35,9 +35,14 @@ main {
 	text-align: center;
 }
 
+
 a {
 	text-decoration: none;
 	color: white;
+}
+
+p a {
+	text-decoration: underline;
 }
 
 hr {
