@@ -78,8 +78,202 @@ p {
 
 	font-size: 25px;
 	text-align: left;
+  display: block;
 }
 
 img {
 	width: 100%;
 }
+
+/*!
+ * mytheme highlight.js theme
+ * Generated from Neovim Treesitter groups in lua/mytheme/treesitter.lua
+ *
+ * Fill in the palette variables below with your actual hex colors.
+ */
+:root {
+  --bg:            #14191f;
+  --fg:            #ffffff;
+
+  /* extras (optional, but kept for completeness) */
+  --bg_dark:       #161b22;
+  --bg_high:       #333333;
+  --gray:          #484f58;
+
+  --comment:       #54846B;
+  --comment_doc:   #5C9FB2;
+
+  --constant:      #94dff7;
+  --number:        #94dff7;
+
+  --string:        #94dff7;
+  --string_escape: #E3A6B7;
+
+  --function:      #cabbed;
+  --keyword:       #f79652;
+
+  --tag:           #f79652;
+
+  --type:          #f7b5c7;
+  --namespace:     #f7b5c7;
+
+  --attribute:     #ffffff;
+  --property:      #ffffff;
+
+  --preproc:       #285A6B;
+
+  /* Optional extras used by the theme */
+  --punct:         #484f58;
+  --operator:      #484f58;
+}
+
+@font-face {
+  font-family: "Monaco Nerd Font";
+  src: url("/assets/MonacoNerdFont-Regular.ttf") format("truetype");
+}
+
+pre {
+  width: 60%;
+  margin: 40px auto;
+  padding: 0 10px;        /* match <p> padding so the left edge aligns */
+  max-width: none;        /* stop using 90ch */
+  background: transparent;/* background will move to the inner code */
+  border-radius: 8px;
+  overflow-x: auto;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+code.hljs {
+  display: block;
+  background: var(--bg);
+  color: var(--fg);
+  font-size: 18px;
+  text-align: left !important;
+  font-family: 'Monaco Nerd Font';
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/* Comments (Treesitter: @comment, @comment.documentation; Classic: Comment)   */
+/* -------------------------------------------------------------------------- */
+.hljs-comment,
+.hljs-quote {
+  color: var(--comment);
+  font-style: italic;
+}
+
+/* highlight.js has no standard “doc comment” class across all grammars,
+   but these are common for structured comment tags/regions. */
+.hljs-doctag,
+.hljs-meta .hljs-comment {
+  color: var(--comment_doc);
+  font-style: italic;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Literals & constants (Treesitter: @constant, @number, @string, @string.escape) */
+/* Classic: Constant, Number, String, SpecialChar                             */
+/* -------------------------------------------------------------------------- */
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet {
+  color: var(--constant);
+}
+
+.hljs-number {
+  color: var(--number);
+}
+
+.hljs-string {
+  color: var(--string);
+}
+
+/* “Escape-ish” */
+.hljs-char,        /* sometimes used for escape sequences */
+.hljs-regexp,      /* often treated “special” */
+.hljs-subst {      /* interpolation marker; often closer to escape/highlight */
+  color: var(--string_escape);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Identifiers (Treesitter: @function, @keyword, @tag, @type, @type.builtin, @namespace) */
+/* Classic: Function, Keyword, Type, Tag                                      */
+/* -------------------------------------------------------------------------- */
+.hljs-title,
+.hljs-title.function_,
+.hljs-function .hljs-title {
+  color: var(--function);
+}
+
+.hljs-keyword {
+  color: var(--keyword);
+}
+
+.hljs-type,
+.hljs-built_in {
+  color: var(--type);
+}
+
+
+/* Namespaces / modules */
+.hljs-variable,
+.hljs-variable.constant_,
+.hljs-variable.language_ {
+  /* If you prefer: swap to --property (your “Identifier” comment suggests taste) */
+  color: var(--namespace);
+}
+
+/* Tags (HTML/XML/JSX) */
+.hljs-tag,
+.hljs-name {
+  color: var(--tag);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Attributes / properties (Treesitter: @attribute, @property)                */
+/* -------------------------------------------------------------------------- */
+.hljs-attr,
+.hljs-attribute {
+  color: var(--attribute);
+}
+
+.hljs-property {
+  color: var(--property);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Pre-processor directives (Treesitter: @preproc; Classic: PreProc)          */
+/* -------------------------------------------------------------------------- */
+.hljs-meta,
+.hljs-meta-keyword,
+.hljs-meta-string {
+  color: var(--comment) !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Useful defaults / polish                                                   */
+/* -------------------------------------------------------------------------- */
+.hljs-punctuation {
+  color: var(--punct);
+}
+
+.hljs-operator {
+  color: var(--operator);
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+/* Selection (optional) */
+/*
+.hljs ::selection {
+  background: rgba(255,255,255,0.12);
+}
+*/
