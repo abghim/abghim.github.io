@@ -1,0 +1,13 @@
+---
+layout: post
+title: <Genghis Khan and the Making of the Modern World>, Jack Weatherford
+---
+Weatherford's 2004 book *Genghis Khan and the Making of the Modern World* is a concise overview of the history of the Mongol Empire and its aftermath. Its introductory nature and captivating narrative is perhaps why the book remains an acclaimed steady-seller even two decades after its writing, a feat especially difficult for a history book.<!--more-->
+
+The book begins with the early life of Temujin, who will grow up to become the founder of the Mongols. Readers are taken from his years spent in isolation and loss to his rivalry with Jamukha, then to the crowning of Temujin as Genghis Khan. Weatherford's literature in this part of history is heavily centered on narrative, a point that may draw criticism from scholarly readers. But there is no doubt that his style makes Temujin's rise to power a joy to read. This clearly shows the importance of Genghis Khan; he not only created the Mongol state, but also the Mongol nation.
+
+The second half of the book describes Genghis Khan's conquests across Eurasia, which Weatherford calls the Mongol World War. Familial dynamics of Genghis Khan's children and grandchildren develops these chapters, which eventually lead to the fragmentation of the Mongol Empire after Genghis Khan's death. With the split officialized after the death of Mongke Khan, Genghis Khan's grandson, Weatherford places his focus on the establishment of the Chinese Yuan Dynasty by Kublai. *Genghis Khan and the Making of the Modern World* ends with a discussion on lasting Mongol influence, although this deserves much more careful treatment than what Weatherford asserts in the book.
+
+This book is an excellent introduction to the era of Mongol dominance in the 13th century. For the general public, an all-round literature that is fun to take in often outweighs scholarly examination of history. And in that regard, the book has proved itself to be a near-optimal choice for two decades.
+
+There are important aspects to keep in mind, however. Whether one considers it a downside or a strength, Weatherford's book is heavily centered on narrative. This layout may feel unsound for, say, rigorous enthusiasts of Mongol history. Weatherford also bases his book almost entirely on the *Secret History of the Mongols*, a secret record of the early Mongol empire written by Persian followers. For the historically curious venturing into the era of Pax Mongolica, the book's strengths outweigh most of the caveats.
