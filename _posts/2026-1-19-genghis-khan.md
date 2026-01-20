@@ -1,6 +1,6 @@
 ---
 layout: post
-title: <Genghis Khan and the Making of the Modern World>, Jack Weatherford
+title: <i>Genghis Khan and the Making of the Modern World</i>, Jack Weatherford
 ---
 Weatherford's 2004 book *Genghis Khan and the Making of the Modern World* is a concise overview of the history of the Mongol Empire and its aftermath. Its introductory nature and captivating narrative is perhaps why the book remains an acclaimed steady-seller even two decades after its writing, a feat especially difficult for a history book.<!--more-->
 
