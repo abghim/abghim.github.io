@@ -42,21 +42,28 @@
 		<hr />
 		<main>
 			<div id="posts" class="box">
-				<h1>Posts</h1>
-				<ul>
-					{% for post in site.posts %}
-					<li class="postcard"><article>
-						<h2 class="posttitle"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-						<span class="postdate">{{ post.date | date: "%y-%m-%d" }}</span>
-						{%- if post.excerpt -%}
-          					<div class="postexcerpt">
-               					{{ post.excerpt }}
-               				</div>
-                   		{%- endif -%}
-					</article></li>
-					{% endfor %}
-				</ul>
-
+				<div class="posts-frame" data-posts-per-page="5">
+					<h1>Posts</h1>
+					<ul class="posts-list">
+						{% for post in site.posts %}
+						<li class="postcard"><article>
+							<h2 class="posttitle"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+							<span class="postdate">{{ post.date | date: "%y-%m-%d" }}</span>
+							{%- if post.excerpt -%}
+          						<div class="postexcerpt">
+               						{{ post.excerpt }}
+               					</div>
+                   			{%- endif -%}
+						</article></li>
+						{% endfor %}
+					</ul>
+					<button class="posts-nav" type="button" aria-label="Show next five posts" hidden>
+						<svg class="posts-nav-wedge" viewBox="0 0 24 24" aria-hidden="true">
+							<path d="M10 4.75 17 12 10 19.25"></path>
+						</svg>
+						<span class="posts-nav-label" aria-hidden="true"></span>
+					</button>
+				</div>
 			</div>
 
 			<hr>
@@ -79,5 +86,81 @@
 				</div>
 			</div>
 		</main>
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const postsFrame = document.querySelector(".posts-frame");
+				if (!postsFrame) return;
+
+				const posts = Array.from(postsFrame.querySelectorAll(".postcard"));
+				const nextButton = postsFrame.querySelector(".posts-nav");
+				const nextLabel = postsFrame.querySelector(".posts-nav-label");
+				const postsPerPage = Number(postsFrame.dataset.postsPerPage) || 5;
+				const totalPages = Math.ceil(posts.length / postsPerPage);
+				let currentPage = 0;
+				let isAnimating = false;
+
+				const getVisiblePosts = () => posts.filter((post) => !post.hidden);
+
+				const renderPage = (pageIndex) => {
+					const start = pageIndex * postsPerPage;
+					const end = start + postsPerPage;
+
+					posts.forEach((post, index) => {
+						post.hidden = index < start || index >= end;
+					});
+				};
+
+				const animatePosts = (elements, keyframes) => {
+					elements.forEach((element, index) => {
+						element.animate(keyframes, {
+							duration: 260,
+							easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+							fill: "both",
+							delay: index * 28,
+						});
+					});
+				};
+
+				const updateNextIndicator = () => {
+					const nextPage = ((currentPage + 1) % totalPages) + 1;
+					const label = `[${nextPage}/${totalPages}]`;
+					nextLabel.textContent = label;
+					nextButton.setAttribute("aria-label", `Show posts page ${nextPage} of ${totalPages}`);
+				};
+
+				const goToNextPage = () => {
+					if (isAnimating || totalPages <= 1) return;
+
+					isAnimating = true;
+					const outgoing = getVisiblePosts();
+					animatePosts(outgoing, [
+						{ opacity: 1, transform: "translateY(0)" },
+						{ opacity: 0, transform: "translateY(-14px)" },
+					]);
+
+					window.setTimeout(() => {
+						currentPage = (currentPage + 1) % totalPages;
+						renderPage(currentPage);
+						updateNextIndicator();
+						const incoming = getVisiblePosts();
+
+						animatePosts(incoming, [
+							{ opacity: 0, transform: "translateY(14px)" },
+							{ opacity: 1, transform: "translateY(0)" },
+						]);
+
+						window.setTimeout(() => {
+							isAnimating = false;
+						}, 320);
+					}, 150);
+				};
+
+				renderPage(currentPage);
+				nextButton.hidden = totalPages <= 1;
+				nextButton.disabled = totalPages <= 1;
+				if (totalPages > 1) updateNextIndicator();
+				nextButton.addEventListener("click", goToNextPage);
+			});
+		</script>
 	</body>
 </html>

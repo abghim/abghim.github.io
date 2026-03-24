@@ -76,6 +76,10 @@ hr {
 a {
 	text-decoration: none;
 	color: white;
+	text-shadow: 0 0 0 currentColor;
+	transition:
+		color 180ms ease,
+		text-shadow 180ms ease;
 }
 
 p a,
@@ -87,12 +91,15 @@ p a:active {
 
 p a:hover,
 p a:focus {
-	color: #cabbed;
+	color: #F7A967;
 	text-decoration: underline;
 }
 
-a:hover {
-	font-weight: 700;
+a:hover,
+a:focus {
+	text-shadow:
+		0.018em 0 0 currentColor,
+		-0.018em 0 0 currentColor;
 }
 
 body {
@@ -103,8 +110,9 @@ body {
 
 li.postcard {
 	margin: 1px;
-	padding: 1px; 
+	padding: 1px;
 	width: 800px;
+	list-style: none;
 }
 
 .postdate {
@@ -113,6 +121,103 @@ li.postcard {
 
 #posts {
 	width: 90%;
+	position: relative;
+}
+
+.posts-frame {
+	position: relative;
+	padding-right: 60px;
+	padding-bottom: 26px;
+}
+
+.posts-list {
+	margin: 0;
+	padding: 0;
+}
+
+.posts-nav {
+	position: absolute;
+	right: 4px;
+	bottom: 14px;
+	border: 0;
+	padding: 0;
+	background: transparent;
+	color: rgba(255, 255, 255, 0.34);
+	font-family: "Anta", sans-serif;
+	line-height: 1;
+	cursor: pointer;
+	opacity: 0;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 6px;
+	transition:
+		opacity 180ms ease,
+		color 180ms ease,
+		transform 180ms ease;
+}
+
+.posts-nav-wedge {
+	display: block;
+	width: 42px;
+	height: 42px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 4.4;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.posts-nav-label {
+	display: block;
+	font-family: "Anta", sans-serif;
+	font-size: 18px;
+	letter-spacing: 0.05em;
+	opacity: 0;
+	transform: translateY(-4px);
+	transition:
+		opacity 180ms ease,
+		transform 180ms ease;
+}
+
+.posts-frame::after {
+	content: "";
+	position: absolute;
+	top: 10%;
+	right: 0;
+	width: 64px;
+	height: 82%;
+	background: linear-gradient(90deg, rgba(20, 25, 31, 0), rgba(20, 25, 31, 0.45));
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 180ms ease;
+}
+
+.posts-frame:hover .posts-nav,
+.posts-frame:focus-within .posts-nav {
+	opacity: 1;
+}
+
+.posts-frame:hover::after,
+.posts-frame:focus-within::after {
+	opacity: 1;
+}
+
+.posts-nav:hover,
+.posts-nav:focus-visible {
+	color: rgba(202, 187, 237, 0.88);
+	transform: translateX(2px);
+	outline: none;
+}
+
+.posts-nav:hover .posts-nav-label,
+.posts-nav:focus-visible .posts-nav-label {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.posts-nav[hidden] {
+	display: none;
 }
 
 article {
