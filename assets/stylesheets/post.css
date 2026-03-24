@@ -41,7 +41,16 @@ a {
 	color: white;
 }
 
-p a {
+p a,
+p a:visited,
+p a:active {
+	color: #cabbed;
+	text-decoration: none;
+}
+
+p a:hover,
+p a:focus {
+	color: #cabbed;
 	text-decoration: underline;
 }
 
